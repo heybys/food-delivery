@@ -1,0 +1,10 @@
+services:
+  sqlserver:
+    restart: always
+    image: 'mcr.microsoft.com/mssql/server:latest'
+    environment:
+      - 'ACCEPT_EULA=yes'
+      - 'MSSQL_PID=Developer'
+      - 'MSSQL_SA_PASSWORD=passw0rd1!'
+    ports:
+      - '1434:1433'
